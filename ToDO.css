@@ -1,0 +1,117 @@
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(./bg4.jpg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#todo-container {
+    max-height: 490px;
+    overflow: hidden;
+    width: 350px;
+    background-color: #bec3f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ 
+}
+
+#task-list {
+ 
+    padding: 0;
+ font-size: 1rem;
+ list-style: none;
+}
+
+ul li{
+   list-style: none;
+   font-size: 17px;
+   padding:16px 6px 9px 32px;
+   user-select: none;
+   cursor: pointer;
+   position: relative;
+   font-weight: bold;
+}
+ul li::before{
+   content: '';
+   position: absolute;
+   height: 28px;
+   width: 28px;
+   border-radius: 50%;
+   background-image: url(./radio.png);
+   background-size: cover;
+   background-position: center;
+   top: 12px;
+   left: 2px;
+}
+
+ul li::before:active{
+    content: '';
+   position: absolute;
+   height: 28px;
+   width: 28px;
+   border-radius: 50%;
+   background-image: url(./check.png);
+   background-size: cover;
+   background-position: center;
+   top: 12px;
+   left: 2px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ ul li.checked::before{
+    background-image: url(./check.png);
+                     
+ }
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #e2e2e2;
+    border-radius: 4px;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button.btn {
+    background-color: #e4d3c5;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: .3rem 0rem;
+}
+ul li span{
+    margin-left: 16rem;
+}
